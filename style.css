@@ -1,0 +1,139 @@
+/* Configurações Gerais focadas em Acessibilidade */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Fundo simulando céu azul e plantação de soja verde vibrante */
+    background: linear-gradient(to bottom, #4a90e2 40%, #2e7d32 100%);
+    background-attachment: fixed;
+    color: #ffffff;
+    /* Tamanho de fonte aumentado para facilitar leitura */
+    font-size: 20px; 
+    line-height: 1.6;
+}
+
+/* Link de acessibilidade escondido que aparece ao usar o 'Tab' */
+.link-salto {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    z-index: 100;
+}
+.link-salto:focus {
+    top: 0;
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro para dar alto contraste com o texto branco */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Conteúdo Principal */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.75); /* Alto contraste garantido */
+    border-radius: 8px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #81c784; /* Verde claro legível no fundo escuro */
+    margin-top: 30px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #555;
+    margin: 40px 0;
+}
+
+/* Gráfico Acessível */
+.container-grafico {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.barra-grafico {
+    background-color: #444;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.barra-grafico::before {
+    content: "";
+    display: block;
+    height: 40px;
+    width: var(--porcentagem);
+    background-color: #4caf50;
+    transition: width 1s ease-in-out;
+}
+
+.rotulo-barra {
+    display: block;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Caixa de Perguntas e Respostas (FAQ) */
+.faq-container {
+    margin-top: 20px;
+}
+
+.faq-pergunta {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: left;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 2px solid #555;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-pergunta:focus, .faq-pergunta:hover {
+    background-color: #444;
+    border-color: #81c784;
+    outline: none;
+}
+
+.faq-resposta {
+    background-color: #222;
+    padding: 0 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    border-radius: 0 0 5px 5px;
+}
+
+/* Classe utilitária para leitores de tela */
+.instrucao-leitor {
+    font-style: italic;
+    color: #aaa;
+    font-size: 0.9rem;
+}
